@@ -1,0 +1,59 @@
+body{
+
+    #fondo-pantalla{
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+
+    }
+}
+header{
+    display: flex;
+    justify-content: center;
+
+    
+    #imagen-titulo{
+        width: 100%;
+        height: 200px;
+    }
+    #animacion-titulo{
+        position: relative;
+        animation-name: movimiento-lateral;
+        animation-duration: 2s;
+    }
+    @keyframes movimiento-lateral {
+        0%{
+            right: 800px;
+            opacity: 0.5;
+        }
+        100%{
+            right: 0px;
+        }
+    }
+    #imagen-pokebola{
+        position: relative;
+        top: 115px;
+        right: 290px;
+        width: 80px;
+        height: 80px;
+    }
+    #animacion-pokebola{
+        position: relative;
+        animation-name: movimiento-horizontal;
+        animation-duration: 2s;
+    }
+    @keyframes movimiento-horizontal {
+        0%{
+            top: -280px;
+            opacity: 0.5;
+        }
+        50%{
+            top: 30px;
+        }
+        100%{
+            top: 0px;
+        }
+        
+    }
+}
+

@@ -1,7 +1,5 @@
-body #fondo-pantalla {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
+body {
+  background-image: url("https://raw.githubusercontent.com/mfrcodingproject/Homework/master/pokedex/media/container_bg.png");
 }
 
 header {
@@ -52,39 +50,290 @@ header #imagen-pokebola {
   right: 290px;
   width: 80px;
   height: 80px;
-}
-
-header #animacion-pokebola {
-  position: relative;
-  -webkit-animation-name: movimiento-horizontal;
-          animation-name: movimiento-horizontal;
+  -webkit-animation-name: movimiento-vertical;
+          animation-name: movimiento-vertical;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
 }
 
-@-webkit-keyframes movimiento-horizontal {
+@-webkit-keyframes movimiento-vertical {
   0% {
-    top: -280px;
+    top: -50px;
     opacity: 0.5;
   }
   50% {
-    top: 30px;
+    top: 150px;
+  }
+  100% {
+    top: 115px;
+  }
+}
+
+@keyframes movimiento-vertical {
+  0% {
+    top: -50px;
+    opacity: 0.5;
+  }
+  50% {
+    top: 150px;
+  }
+  100% {
+    top: 115px;
+  }
+}
+
+main {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#lista-pokemones {
+  position: relative;
+  width: 900px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation-name: principal-pokedex;
+          animation-name: principal-pokedex;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@-webkit-keyframes principal-pokedex {
+  0% {
+    top: 100px;
+    opacity: 0.5;
   }
   100% {
     top: 0px;
   }
 }
 
-@keyframes movimiento-horizontal {
+@keyframes principal-pokedex {
   0% {
-    top: -280px;
+    top: 100px;
     opacity: 0.5;
-  }
-  50% {
-    top: 30px;
   }
   100% {
     top: 0px;
+  }
+}
+
+#lista-pokemones .pokemones-pokedex:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 5px 3px 3px 5px rgba(44, 41, 41, 0.377);
+          box-shadow: 5px 3px 3px 5px rgba(44, 41, 41, 0.377);
+}
+
+#lista-pokemones .pokemones-pokedex {
+  width: 150px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 20px;
+}
+
+#lista-pokemones .pokemones-pokedex .imagen-pokedex {
+  width: 150px;
+  background-color: #dad6d6;
+}
+
+#lista-pokemones .pokemones-pokedex .numero-pokemon {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+#lista-pokemones .pokemones-pokedex .nombre-pokemon {
+  font-weight: bold;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+#lista-pokemones .pokemones-pokedex .tipos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 120px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 3px;
+  text-align: center;
+  font-size: 12px;
+}
+
+#lista-pokemones .pokemones-pokedex .tipos .pokemonesplanta {
+  width: 52px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: green;
+  color: white;
+}
+
+#lista-pokemones .pokemones-pokedex .tipos .pokemonesfuego {
+  width: 52px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: red;
+  color: white;
+}
+
+#lista-pokemones .pokemones-pokedex .tipos .pokemonesagua {
+  width: 52px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: #008cff;
+  color: white;
+}
+
+#lista-pokemones .pokemones-pokedex .tipos .pokemonesbicho {
+  width: 52px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: greenyellow;
+}
+
+#lista-pokemones .pokemones-pokedex .tipos .pokemonesnormal {
+  width: 52px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: grey;
+  color: white;
+}
+
+#lista-pokemones .pokemones-pokedex .tipos .pokemonestierra {
+  width: 52px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: #d88c35;
+  color: white;
+}
+
+#lista-pokemones .pokemones-pokedex .tipos .pokemoneselectrico {
+  width: 52px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: yellow;
+}
+
+#lista-pokemones .pokemones-pokedex .tipos .pokemonesveneno {
+  width: 52px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: blueviolet;
+  color: white;
+}
+
+#lista-pokemones .pokemones-pokedex .tipos .pokemoneshielo {
+  width: 52px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: #99e7f1;
+}
+
+#lista-pokemones .pokemones-pokedex .tipos .pokemoneshada {
+  width: 52px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: pink;
+}
+
+@media (max-width: 415px) {
+  header #imagen-titulo {
+    width: 370PX;
+    height: 180px;
+    margin-left: 50px;
+  }
+  header #imagen-pokebola {
+    position: relative;
+    top: 100px;
+    right: 195px;
+    width: 60px;
+    height: 60px;
+  }
+  @-webkit-keyframes movimiento-vertical {
+    0% {
+      top: -50px;
+      opacity: 0.5;
+    }
+    50% {
+      top: 150px;
+    }
+    100% {
+      top: 100px;
+    }
+  }
+  @keyframes movimiento-vertical {
+    0% {
+      top: -50px;
+      opacity: 0.5;
+    }
+    50% {
+      top: 150px;
+    }
+    100% {
+      top: 100px;
+    }
+  }
+  body #fondo-pantalla {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+  body #lista-pokemones .pokemones-pokedex {
+    width: 200px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+  }
+  body #lista-pokemones .pokemones-pokedex .imagen-pokedex {
+    width: 200px;
+  }
+  body #lista-pokemones .pokemones-pokedex .nombre-pokemon {
+    font-size: 25px;
+  }
+  body #lista-pokemones .pokemones-pokedex .numero-pokemon {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
